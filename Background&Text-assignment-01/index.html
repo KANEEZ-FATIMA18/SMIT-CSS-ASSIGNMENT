@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background & Text</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h2>Step 1: Your details</h2>
+      
+      <div class="input">
+        <span> Name</span>
+        <input type="text"  placeholder="First and last name" />
+      </div>
+      <div class="input">
+        <span>Email</span>
+        <input type="email" placeholder="example@domain.com" />
+      </div>
+      <div class="input">
+        <span>Phone</span>
+        <input type="text" placeholder="Eg. +447500000000" />
+      </div>
+
+      <h2>Step 2: Delivery address</h2>
+      <div class="input">
+        <span>Address</span>
+        <textarea></textarea>
+      </div>
+      <div class="input">
+        <span> Post code</span>
+        <input type="text" />
+        
+      </div>
+      <div class="input">
+        <span>Country</span>
+        <input type="text" value="Pakistan" />
+      </div>
+
+      <h2>Step 3: Card details</h2>
+      <div class="input">
+        <span> Card type</span>
+        <div class="cards">
+          <label>
+            <input type="radio" name="card" />
+            <img src="https://img.icons8.com/color/24/visa.png" /> VISA
+          </label>
+          <label>
+            <input type="radio" name="card" />
+            <img src="https://img.icons8.com/color/24/amex.png" /> AmEx
+          </label>
+          <label>
+            <input type="radio" name="card" />
+            <img src="https://img.icons8.com/color/24/mastercard.png" />
+            Mastercard
+          </label>
+        </div>
+      </div>
+      <div class="input">
+        <span>Card number</span>
+        <input type="text" />
+      </div>
+      <div class="input">
+        <span>Security code</span>
+        <input type="text" />
+      </div>
+      <div class="input">
+        <span> Name on card</span>
+        <input type="text" placeholder="Exact name as on the card" />
+      </div>
+
+      <button>BUY IT!</button>
+    </div>
+  </body>
+</html>
