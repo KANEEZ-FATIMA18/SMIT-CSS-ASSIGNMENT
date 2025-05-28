@@ -1,0 +1,647 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+hr {
+  width: 85%;
+  margin: 0 auto;
+  border: 1px solid #e0dfdf;
+}
+
+.navbar {
+  background-color: #ffffff;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0px 15px 10px rgb(233, 227, 227);
+}
+
+.nfirst {
+  display: inline-block;
+  width: 49%;
+  vertical-align: middle;
+}
+.nfirst img {
+  width: 20%;
+  height: 100%;
+  margin-left: 15%;
+  margin-top: 20px;
+}
+
+.nlast {
+  padding-top: 15px;
+
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 10%;
+}
+
+.login {
+  width: 90px;
+  border-radius: 7px;
+  border: none;
+  background-color: white;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid black;
+  margin-right: 20px;
+}
+
+.signup {
+  width: 90px;
+  margin-right: 25px;
+  border-radius: 7px;
+  border: none;
+  background-color: #e32d6f;
+  font-size: 16px;
+  padding: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+#icon1 i {
+  color: black;
+  font-size: 20px;
+
+  display: inline-block;
+}
+
+#lang {
+  border: none;
+  border-style: none;
+  background-color: transparent;
+  color: black;
+  font-size: 16px;
+
+  margin-left: 10px;
+}
+
+#lang option {
+  background-color: #e32d6f;
+  color: white;
+
+  font-size: 16px;
+  padding: 10px;
+}
+
+#icon2 i {
+  color: rgb(241, 245, 234);
+  font-size: 20px;
+
+  margin-right: 10px;
+  display: inline-block;
+  border: 1px thistle solid;
+  border-radius: 50%;
+  background-color: rgb(232, 223, 213);
+  padding: 10px;
+}
+
+/* HERO SECTION  */
+
+.hero {
+  background-color: #f7f7f7;
+  height: 86vh;
+  width: 100%;
+}
+
+.hero1 {
+  display: inline-block;
+  width: 59%;
+  height: 50%;
+  vertical-align: top;
+  text-align: left;
+  padding-left: 100px;
+  padding-top: 100px;
+  vertical-align: middle;
+}
+
+.hero1 h2 {
+  color: rgb(5, 4, 4);
+  font-size: 40px;
+  font-weight: 900;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 20px;
+}
+.hero1-form {
+  width: 700px;
+  height: 80px;
+  border-radius: 10px;
+  font-family: sans-serif;
+  padding-top: 15px;
+  background-color: white;
+}
+.hero1-form input {
+  width: 60%;
+  height: 75%;
+  border: none;
+  border-radius: 10px;
+  padding-left: 20px;
+  font-size: 16px;
+  margin-left: 30px;
+  border: 1px solid gray;
+}
+.hero1-form button {
+  width: 15%;
+  height: 70%;
+  border: none;
+  border-radius: 10px;
+  background-color: #e32d6f;
+  color: white;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.hero2 {
+  display: inline-block;
+  width: 40%;
+  height: auto;
+  vertical-align: middle;
+  text-align: right;
+  padding-top: 50px;
+  padding-left: 50px;
+  margin-top: 180px;
+}
+
+.hero2 img {
+  width: 100%;
+  height: 100%;
+  margin-left: 100px;
+  object-fit: contain;
+}
+
+/* SECOND SECTION */
+
+.secondsection {
+  width: 100%;
+  height: 110vh;
+}
+
+.secondsection > h2 {
+  text-align: left;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  padding-left: 5%;
+  font-size: 30px;
+  font-weight: 900;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+.bottomimg {
+  background-image: url("https://images.deliveryhero.io/image/foodpanda/home-vendor-pk.jpg?width=2528&height=1617.92");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+}
+
+.top {
+  background-color: white;
+  width: 40%;
+  height: 320px;
+  border-radius: 10px;
+  border: none;
+  margin-left: 10%;
+  padding: 10px 30px;
+  box-shadow: 5px 5px 10px rgb(165, 164, 164);
+  margin-top: -60px;
+}
+
+.top > h2 {
+  font-size: 25px;
+  padding: 25px 0px;
+  font-weight: 600;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+.top > p {
+  font-size: 16px;
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+}
+.top button {
+  width: 120px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: #e32d6f;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+/* FOODPANDA FOR BUSINESS SECTION  */
+
+.business {
+  width: 100%;
+  height: 110vh;
+}
+
+.business > h2 {
+  text-align: left;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  padding-left: 5%;
+  font-size: 30px;
+  font-weight: 900;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+.businessimg {
+  background-image: url("https://images.deliveryhero.io/image/foodpanda/home-corporate-pk.jpg?width=2528&height=1617.92");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+}
+
+.businesstop {
+  background-color: white;
+  width: 40%;
+  height: 230px;
+  border-radius: 10px;
+  border: none;
+  margin-left: 10%;
+  padding: 10px 30px;
+  box-shadow: 5px 5px 10px rgb(165, 164, 164);
+  margin-top: -75px;
+}
+
+.businesstop > h2 {
+  font-size: 25px;
+  padding: 25px 0px;
+  font-weight: 600;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+.businesstop > p {
+  font-size: 17px;
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(114, 114, 114);
+  font-family: "Poppins", sans-serif;
+}
+
+.businesstop button {
+  width: 120px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: #e32d6f;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* SECOND LAST SECTION  */
+
+.secondlast {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.onesection > h2 {
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 10%;
+  font-size: 35px;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+.secondlast p {
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 20px;
+  font-size: 15px;
+  font-weight: 100;
+  font-style: normal;
+  color: rgb(92, 91, 91);
+  font-family: "Poppins", sans-serif;
+  line-height: 27px;
+}
+
+.twosection > h2 {
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 10%;
+  font-size: 25px;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+.twosection > h3 {
+  text-align: left;
+  padding-left: 10%;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+.twosection span {
+  color: #e32d6f;
+  font-size: 17px;
+}
+
+#lastheading {
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 10%;
+  font-size: 17px;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ______________PUT US IN YOUR POCKET___________________ */
+
+.putus {
+  width: 100%;
+  height: 70vh;
+  padding-top: 50px;
+}
+
+.putus > h2 {
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  padding-left: 8%;
+  font-size: 33px;
+  font-weight: 900;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+.childputus {
+  width: 85%;
+  background-color: #e32d6f;
+  height: 350px;
+  margin: 0 auto;
+  color: white;
+  vertical-align: top;
+  border-radius: 15px;
+}
+
+.putusleft {
+  width: 59%;
+
+  vertical-align: top;
+
+  display: inline-block;
+}
+
+.putusleft > h3 {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  font-size: 25px;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+.putusleft > p {
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+  margin-bottom: 5%;
+  line-height: 25px;
+  font-family: "Poppins", sans-serif;
+}
+.putusleft > span {
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+}
+
+.putusleft > img {
+  width: 13%;
+  height: 100%;
+  padding: 10px;
+  object-fit: cover;
+  margin-left: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.putusright {
+  width: 40%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.putusright > img {
+  width: 100%;
+  height: 127%;
+  object-fit: cover;
+  margin-top: -60px;
+}
+
+/* FOOTER SECTION  */
+.footer {
+  width: 100%;
+  height: 100vh;
+}
+
+.topfooter {
+  margin-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 7%;
+  font-size: 17px;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  list-style: none;
+  color: black;
+}
+.topfooter li {
+  display: inline-block;
+  padding-right: 20px;
+  vertical-align: top;
+  text-transform: capitalize;
+}
+
+.topfooter a {
+  color: rgb(101, 101, 101);
+  text-decoration: underline;
+}
+
+.centerfooter {
+  width: 90%;
+  margin: 0 auto;
+  height: 70%;
+  padding-top: 40px;
+}
+.centerfooter li {
+  list-style: none;
+  font-size: 16px;
+  color: rgb(101, 101, 101);
+  text-decoration: underline;
+  font-weight: 600;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 0px;
+}
+
+.onefooter {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  color: rgb(148, 147, 147);
+  font-size: 16px;
+}
+
+.twofooter {
+  display: inline-block;
+  width: 22%;
+  vertical-align: top;
+}
+
+.threefooter {
+  display: inline-block;
+  width: 22%;
+  vertical-align: top;
+}
+
+.fourfooter {
+  display: inline-block;
+  width: 22%;
+  vertical-align: top;
+}
+
+.bottomfooter {
+  width: 90%;
+  height: 90px;
+  margin: 0 auto;
+}
+
+.leftf {
+  width: 59%;
+  height: 100%;
+}
+
+.leftf img,
+svg {
+  width: 12%;
+  height: 100%;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.rightf {
+  width: 40%;
+  height: 100%;
+  vertical-align: top;
+  float: right;
+}
+.rightf i {
+  padding: 5px;
+  color: black;
+  font-size: 22px;
+  border-radius: 50%;
+  border: 2px solid rgb(152, 152, 155);
+  background-color: white;
+  margin-right: 20px;
+  margin-top: 30px;
+  float: right;
+}
+
+/* FIND US IN MORE CITIES */
+
+/* .findus{
+  width: 100%;
+  height: 100vh;
+  background-color: #9f4545;
+}
+
+.finduschild{
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  color: rgb(255, 255, 255);
+  padding-top: 50px;
+
+}
+
+.city{
+  width: 40%;
+  height: 20%;
+  display: inline-block;
+   padding-top: 50px;
+
+} */
+
+.findus {
+  width: 88%;
+  height: auto;
+   margin: 0 auto;
+ 
+}
+
+.findus h2 {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  font-size: 30px;
+  font-weight: 900;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+.city {
+  display: inline-block;
+  width: 300px;
+  height: 250px;
+  margin: 12px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  vertical-align: top;
+  background-color: #fff;
+}
+
+.city img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.city span {
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+
+  position: relative;
+  top: -40px;
+  margin-left: 20px;
+  font-weight: 600;
+  background-color: #f7f7f7;
+  font-family: poppins, sans-serif;
+}
