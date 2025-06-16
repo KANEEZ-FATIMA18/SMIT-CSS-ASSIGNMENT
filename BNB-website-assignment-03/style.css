@@ -19,7 +19,7 @@
   padding-top: 10px;
 }
 
-.topbar p{
+.topbar p {
   color: white;
 }
 
@@ -110,7 +110,6 @@ li:hover,
   width: 100%;
   /* height: auto; */
   height: 100%;
-  
 }
 
 .hero-image img {
@@ -380,7 +379,7 @@ p {
 }
 
 .bnb {
-  color: orange;
+  color: #f6821d;
 }
 
 .f-icons {
@@ -395,7 +394,7 @@ p {
 }
 
 .f-icons i:hover {
-  color: orange;
+  color: #f6821d;
   transition: all 0.7 ease-in-out;
 }
 
@@ -412,8 +411,7 @@ p {
 
 /* -___________________________NEW ARRIVAL_____________________________ */
 
-
- .new-head {
+.new-head {
   width: 100%;
   height: auto;
   display: flex;
@@ -422,8 +420,8 @@ p {
   flex-wrap: wrap;
 }
 
-.new-child{
-   width: 85%;
+.new-child {
+  width: 85%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -431,15 +429,231 @@ p {
   gap: 10px;
 }
 
-.new-head h1{
-   font-family: Arial, Helvetica, sans-serif;
+.new-head h1 {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
   color: black;
   padding: 50px 0px;
 }
 
-
-.new-item img{
+.new-item img {
   width: 180px;
   padding: 5px 15px;
+}
+
+/* __________________________________Recommended by Celebrities_____________________________________ */
+
+.recommend {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.recommend-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.recommend-head {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.recommend-head h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 27px;
+  color: black;
+  padding: 30px 0px;
+  text-align: center;
+}
+
+.recommend-videos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 100%;
+}
+
+.recommend-videos video {
+  border-radius: 20px;
+  width: 20%;
+  height: auto;
+}
+
+.follow-top {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.follow-top h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 27px;
+  color: black;
+  padding: 30px 0px;
+  text-align: center;
+}
+
+.follow-bottom {
+  width: 100%;
+  max-height: 220px;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.follow-bottom img {
+  width: 16%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.featured {
+  width: 100%;
+}
+
+.featured > h3 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  color: black;
+  padding: 30px 0px;
+  text-align: center;
+}
+
+.featured-child {
+  flex-direction: row;
+  display: flex;
+  width: 100vw;
+  max-width: 100%;
+  height: 100px;
+  align-items: center;
+  column-gap: 50px;
+}
+
+/*________________________________ FAQS ________________________________________ */
+
+.faqs {
+  width: 100%;
+}
+.faqs h3 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  color: black;
+  padding: 30px 0px;
+}
+
+.faq-child1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+.faq-child1 > button {
+  width: 80%;
+  text-align: left;
+  font-size: 12px;
+  background-color: #f6f6f8;
+  border: none;
+  padding: 18px 15px;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.faq-child1 i {
+  background-color: black;
+  color: white;
+  padding: 18px;
+  font-size: 15px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.faq-child2 {
+  width: 90%;
+  display: flex;
+  column-gap: 50px;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  flex-wrap: wrap;
+  margin: 50px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.icon-box {
+  width: 25%;
+  text-align: center;
+}
+
+.icon-box > h3 {
+  font-size: 15px;
+}
+
+.icon-box > p {
+  color: #a9a9a9;
+  line-height: 20px;
+  font-size: 13px;
+}
+
+.icon-box i {
+  color: #f6821d;
+  border: 1px solid #f6821d;
+  border-radius: 50%;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.icon-box i:hover {
+  background-color: #f6821d;
+  color: white;
+  cursor: pointer;
+}
+
+.faq-child3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: left;
+  overflow: hidden;
+}
+
+.text {
+  width: 80%;
+  line-height: 30px;
+}
+
+.text > h4 {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+.text > p {
+  margin-top: 10px;
+  color: #a9a9a9;
 }
