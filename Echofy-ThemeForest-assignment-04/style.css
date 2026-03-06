@@ -1,0 +1,678 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Preloader */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0c1c0c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader-inner {
+  display: flex;
+  gap: 10px;
+}
+
+.loader-inner .dot {
+  width: 15px;
+  height: 15px;
+  background-color: #87bf3e;
+  border-radius: 50%;
+  animation: dotPulse 1.5s infinite ease-in-out;
+}
+
+.loader-inner .dot:nth-child(2) { animation-delay: 0.2s; }
+.loader-inner .dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes dotPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+}
+
+/* Scroll Progress */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background-color: #87bf3e;
+  z-index: 1002;
+}
+
+/* Back to Top */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #87bf3e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 99;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#backToTop:hover {
+  background-color: #0c1c0c;
+  transform: translateY(-5px);
+}
+
+a, button, i {
+  transition: all 0.3s ease;
+}
+
+/*_________________TOPBAR_____________ */
+.topbar {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  background: rgba(12, 28, 12, 0.95);
+  padding: 0 5%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.topbar p {
+  color: #e0e0e0;
+}
+
+.top-child {
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  column-gap: 35px;
+  padding: 0% 10%;
+  font-size: 13px;
+  letter-spacing: 1px;
+  flex-wrap: wrap;
+}
+
+.top-child i {
+  color: #79b900;
+  font-size: 17px;
+}
+
+.top-socialicons i {
+  color: white;
+  padding-right: 10px;
+}
+
+.top-socialicons i:hover {
+  color: #79b900;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+/* __________________________NAVBAR_________________________ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  height: 100px;
+  background: transparent;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo {
+  flex: 0 0 auto;
+}
+
+.logo img {
+  height: 45px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.nav-item i {
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+.navbar.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  background-color: #0c1c0c;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  padding: 10px 5%;
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+/* Dropdown Menu Refinement */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  display: none;
+  flex-direction: column;
+  min-width: 220px;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 0 0 10px 10px;
+  border-top: 3px solid #79b900;
+  padding: 15px 0;
+}
+
+.dropdown-menu li a {
+  padding: 10px 25px;
+  display: block;
+  color: #0c1c0c;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f5f8ed;
+  color: #79b900;
+  padding-left: 30px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+.nav-touch {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 25px;
+  align-items: center;
+}
+
+.nav-touch > button {
+  color: white;
+  background-color: #87bf3e;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-touch > i {
+  color: #87bf3e;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* _______________________________HERO SECTION _________________________________ */
+.wrapper {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(https://echofyy.netlify.app/images/banner-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.side-social {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.follow-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+.side-social .line {
+  width: 1px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+}
+
+.side-social .social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+  font-size: 14px;
+}
+
+.slider-dots {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 10;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #87bf3e;
+  border-color: #87bf3e;
+  box-shadow: 0 0 10px #87bf3e;
+}
+
+.hero {
+  width: 100%;
+  padding-top: 10%;
+  padding-left: 15%;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-child {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  z-index: 5;
+}
+
+.hero-green {
+  color: #87bf3e;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.hero-child > h2 {
+  color: white;
+  font-size: 75px;
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: none;
+}
+
+.hero-white {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+#first-btn {
+  color: white;
+  background-color: #87bf3e;
+  border: none;
+  border-radius: 40px;
+  padding: 18px 45px;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#second-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  cursor: pointer;
+}
+
+.play-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(135, 191, 62, 0.1);
+  border: 1.5px solid #87bf3e;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #87bf3e;
+}
+
+/* __________________________ABOUT ECHOFY ____________________________ */
+.about-echofy {
+  background-image: url(https://echofyy.netlify.app/images/about-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 80px;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  flex-wrap: wrap;
+}
+
+#award-img {
+  position: absolute;
+  left: 0px;
+  bottom: 30px;
+}
+
+.about-child1 { position: relative; }
+
+.about-child2 h3 {
+  font-size: 2.5em;
+  padding: 25px 0px;
+  color: #0c1c0c;
+}
+
+.pra-child {
+  display: flex;
+  column-gap: 20px;
+  padding: 25px 0px;
+}
+
+.pra-child h4 { font-size: 1.3em; padding-bottom: 20px; color: #0c1c0c; }
+.pra-child p { color: #787874; }
+
+.about-child2 button {
+  color: white;
+  background-color: #79b900;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 35px;
+  font-size: 17px;
+  margin-top: 30px;
+}
+
+/* __________________________OUR SERVICES __________________________ */
+.our-services {
+  padding: 100px 5%;
+  background-color: #ffffff;
+}
+
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+.service-subtitle {
+  color: #87bf3e;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.service-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #0c1c0c;
+}
+
+.header-right { display: flex; gap: 15px; }
+
+.service-arrow {
+  width: 50px; height: 50px; border-radius: 50%;
+  background-color: #f5f8ed; color: #87bf3e;
+  display: flex; justify-content: center; align-items: center;
+  cursor: pointer;
+}
+
+.service-arrow.active, .service-arrow:hover {
+  background-color: #87bf3e;
+  color: white;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background-color: #f5f8ed;
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.5s ease;
+}
+
+.card-img { width: 100%; border-radius: 10px; overflow: hidden; margin-bottom: 25px; }
+.card-img img { width: 100%; transition: 0.5s; }
+.service-card:hover .card-img img { transform: scale(1.1); }
+
+.card-top { display: flex; justify-content: space-between; margin-bottom: 20px; }
+
+.service-card h3 { font-size: 24px; color: #0c1c0c; margin-bottom: 15px; }
+.service-card p { color: #787874; font-size: 15px; }
+
+.service-card:hover { background-color: #0c1c0c; transform: translateY(-10px); }
+.service-card:hover h3, .service-card:hover p { color: #ffffff; }
+
+/* __________________________OUR PROJECTS __________________________ */
+.our-projects {
+  padding: 100px 5%;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.project-card {
+  position: relative;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.project-img { width: 100%; height: 100%; }
+.project-img img { width: 100%; height: 100%; object-fit: cover; }
+
+.project-info {
+  position: absolute; bottom: 20px; left: 20px; right: 20px;
+  background-color: #f5f8ed; padding: 25px; border-radius: 10px;
+  border-left: 4px solid #87bf3e;
+  transition: 0.5s;
+}
+
+.project-card:hover .project-info { background-color: #87bf3e; transform: translateY(-10px); }
+.project-card:hover .project-info h3, .project-card:hover .project-info p { color: white; }
+
+/* ____________________RATING & SKILLS ____________________ */
+.rating-main {
+  background-image: url("https://echofyy.netlify.app/images/counter-bg.png");
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; gap: 40px;
+}
+
+.rating-childs h4 { color: white; font-size: 2.5em; }
+.rating-childs p { color: white; font-size: 1.2em; }
+
+.our-skills-main { padding: 100px 5%; background-color: #f7f9f2; }
+.skills-container { display: flex; justify-content: space-between; align-items: center; gap: 60px; }
+.skills-content { flex: 1; }
+.skills-media { flex: 1; display: flex; justify-content: center; }
+.media-circle { width: 450px; height: 450px; border-radius: 50%; border: 15px solid rgba(135, 191, 62, 0.1); position: relative; }
+.main-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+
+/* ________________WORKING PROCESS ____________________ */
+.safe-main { padding: 100px 5%; text-align: center; }
+.process-container { display: flex; justify-content: center; gap: 30px; margin-top: 60px; }
+.process-item { flex: 1; display: flex; flex-direction: column; align-items: center; }
+.process-circle-wrapper { width: 220px; height: 220px; position: relative; display: flex; justify-content: center; align-items: center; margin-bottom: 40px; }
+.outer-circle { position: absolute; width: 100%; height: 100%; border: 3px dotted #87bf3e; border-radius: 50%; animation: rotateBorder 30s linear infinite; }
+.inner-circle { width: 160px; height: 160px; background: white; border: 5px solid #87bf3e; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 60px; color: #87bf3e; }
+
+@keyframes rotateBorder { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* ____________________TEAM SECTION ____________________ */
+.meet-main { padding: 100px 5%; background-image: url("https://echofyy.netlify.app/images/about-bg.jpg"); text-align: center; }
+.meet-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.meet-card { flex: 1; min-width: 300px; max-width: 370px; margin-top: 100px; position: relative; }
+.card-image-wrap { width: 250px; height: 250px; margin: 0 auto -125px; position: relative; z-index: 2; }
+.member-img { width: 100%; border-radius: 50%; }
+.card-info { background-color: #f5f8ed; padding: 150px 20px 40px; border-radius: 10px; transition: 0.4s; }
+.meet-card:hover .card-info { background: white; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
+
+/* __________________________FOOTER __________________________ */
+.footer {
+  background-image: url(https://echofyy.netlify.app/images/footer-bg.jpg);
+  background-size: cover;
+  padding: 100px 5%;
+  color: white;
+}
+.f-top { display: flex; justify-content: space-between; align-items: center; background: #87bf3e; padding: 40px; border-radius: 10px; }
+.f-center { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 50px; }
+
+/* ================== RESPONSIVE MEDIA QUERIES ================== */
+
+@media screen and (max-width: 1200px) {
+  .hero-child h2 { font-size: 60px; }
+  .hero-child { width: 70%; }
+}
+
+@media screen and (max-width: 992px) {
+  .hamburger { display: flex; }
+  .nav-links {
+    position: fixed; top: 0; right: -100%;
+    width: 300px; height: 100vh;
+    background-color: #0c1c0c;
+    flex-direction: column;
+    padding: 100px 30px;
+    transition: 0.5s;
+    z-index: 1000;
+  }
+  .nav-links.active { right: 0; }
+  .nav-menu { flex-direction: column; gap: 15px; }
+  .hero { text-align: center; padding-left: 5%; }
+  .hero-child { width: 100%; align-items: center; }
+  .services-grid, .projects-grid { grid-template-columns: 1fr 1fr; }
+  .side-social, .slider-dots { display: none; }
+}
+
+@media screen and (max-width: 768px) {
+  section { padding: 60px 5% !important; }
+  .section-title, .hero-child h2 { font-size: 36px !important; }
+  .topbar { display: none; }
+  .hero-buttons { flex-direction: column; width: 100%; }
+  #first-btn, #second-btn { width: 100%; justify-content: center; }
+  .services-grid, .projects-grid { grid-template-columns: 1fr; }
+  .about-echofy, .skills-container { flex-direction: column; text-align: center; }
+  .f-top, .f-center { flex-direction: column; text-align: center; gap: 20px; }
+  .f-center { grid-template-columns: 1fr; }
+  .process-container { flex-direction: column; align-items: center; }
+  .media-circle { width: 300px; height: 300px; }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-child h2 { font-size: 28px !important; }
+  .nav-links { width: 100%; }
+}
